@@ -111,6 +111,37 @@
             padding: 15px;
         }
 
+        .x9dem-credit-link {
+            color: #a9f1df;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 6px;
+            padding: 0.4em 1em;
+            font-size: 0.75rem;
+            font-family: 'Electrolize', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            font-style: italic;
+            letter-spacing: 0.2px;
+        }
+
+        .x9dem-github-profile-link {
+            margin-top: 0.8rem;
+        }
+
+        .x9dem-credit-link:hover {
+            background: #232526;
+            color: #ffcc00;
+            border-color: #ffcc00;
+        }
+
+        .x9dem-github-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         @media (max-width: 500px) {
             .x9dem-header {
                 flex-direction: row;
@@ -144,7 +175,10 @@
         <div class="x9dem-header">
             <img src="assets/VSCode.svg" alt="VS Code" />
             <h1>VS Code + GitHub Guide</h1>
+            <div class="x9dem-github-profile">
             <img src="assets/GitHub-rev.svg" alt="GitHub" />
+            <a href="https://github.com/9demnex" class="x9dem-credit-link x9dem-github-profile-link">9demnex</a>
+        </div>
         </div>
 
 
@@ -226,67 +260,46 @@ open index.html</code></pre>
 
         <div class="x9dem-section">
             <h2>Start Fresh in a New Repository</h2>
-        
+
             <h3>Step-by-Step: Exit Current Repo & Start a New One</h3>
             <p>Follow these commands to back out of a current repo and begin working in a separate new one:</p>
-        
+
             <h4>1. Move Up One Level in Terminal</h4>
             <pre><button class="x9dem-copy-btn">Copy</button><code>cd ..</code></pre>
-        
+
             <h4>2. Navigate to Your Desired Directory</h4>
             <pre><button class="x9dem-copy-btn">Copy</button><code>cd your-folder-name</code></pre>
-        
+
             <h4>3. Clone the New Repository</h4>
             <pre><button class="x9dem-copy-btn">Copy</button><code>git clone [new-repo-url]
 cd your-new-repo-folder</code></pre>
-        
+
             <h4>4. Add and Push Your Project</h4>
             <pre><button class="x9dem-copy-btn">Copy</button><code>git add .
 git commit -m "Initial project commit"
 git push -u origin main</code></pre>
         </div>
-          
 
-<div style="text-align: right; margin-top: 2rem;">
-    <a href="https://chatgpt.com/g/g-ZpZUQbCxM-vs-code-copilot" class="x9dem-credit-link">
-        Created with the help of VS Code Copilot GPT
-    </a>
-</div>
-</div>
 
-<script>
-    document.querySelectorAll('.x9dem-copy-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const codeBlock = button.nextElementSibling;
-            if (codeBlock && codeBlock.tagName === 'CODE') {
-                navigator.clipboard.writeText(codeBlock.innerText.trim());
-                button.textContent = 'Copied!';
-                setTimeout(() => (button.textContent = 'Copy'), 1500);
-            }
+        <div style="text-align: right; margin-top: 2rem;">
+            <a href="https://chatgpt.com/g/g-ZpZUQbCxM-vs-code-copilot" class="x9dem-credit-link">
+                Created with the assistance of VS Code Copilot GPT
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.x9dem-copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const codeBlock = button.nextElementSibling;
+                if (codeBlock && codeBlock.tagName === 'CODE') {
+                    navigator.clipboard.writeText(codeBlock.innerText.trim());
+                    button.textContent = 'Copied!';
+                    setTimeout(() => (button.textContent = 'Copy'), 1500);
+                }
+            });
         });
-    });
-</script>
-<style>
-    .x9dem-credit-link {
-        color: #a9f1df;
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 6px;
-        padding: 0.4em 1em;
-        font-size: 0.95rem;
-        font-family: 'Electrolize', Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
-        transition: background 0.2s, color 0.2s, border 0.2s;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        font-style: italic;
-        letter-spacing: 0.2px;
-    }
-    .x9dem-credit-link:hover {
-        background: #232526;
-        color: #ffcc00;
-        border-color: #ffcc00;
-    }
-</style>
+    </script>
 </body>
 
 </html>
