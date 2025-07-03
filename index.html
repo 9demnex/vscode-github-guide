@@ -223,21 +223,46 @@ code index.html
 # Open in default browser (macOS)
 open index.html</code></pre>
         </div>
+<div style="text-align: right; margin-top: 2rem;">
+    <a href="https://chatgpt.com/g/g-ZpZUQbCxM-vs-code-copilot" class="x9dem-credit-link">
+        Created with the help of VS Code Copilot GPT
+    </a>
+</div>
+</div>
 
-    </div>
-
-    <script>
-        document.querySelectorAll('.x9dem-copy-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                const codeBlock = button.nextElementSibling;
-                if (codeBlock && codeBlock.tagName === 'CODE') {
-                    navigator.clipboard.writeText(codeBlock.innerText.trim());
-                    button.textContent = 'Copied!';
-                    setTimeout(() => (button.textContent = 'Copy'), 1500);
-                }
-            });
+<script>
+    document.querySelectorAll('.x9dem-copy-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const codeBlock = button.nextElementSibling;
+            if (codeBlock && codeBlock.tagName === 'CODE') {
+                navigator.clipboard.writeText(codeBlock.innerText.trim());
+                button.textContent = 'Copied!';
+                setTimeout(() => (button.textContent = 'Copy'), 1500);
+            }
         });
-    </script>
+    });
+</script>
+<style>
+    .x9dem-credit-link {
+        color: #a9f1df;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 6px;
+        padding: 0.4em 1em;
+        font-size: 0.95rem;
+        font-family: 'Electrolize', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s, border 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        font-style: italic;
+        letter-spacing: 0.2px;
+    }
+    .x9dem-credit-link:hover {
+        background: #232526;
+        color: #ffcc00;
+        border-color: #ffcc00;
+    }
+</style>
 </body>
 
 </html>
